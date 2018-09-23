@@ -8,20 +8,75 @@
 
 /* Begin PBXBuildFile section */
 		91574D2A2157EA08005FBDB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91574D292157EA08005FBDB5 /* AppDelegate.swift */; };
-		91574D2C2157EA08005FBDB5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91574D2B2157EA08005FBDB5 /* ViewController.swift */; };
+		91574D2C2157EA08005FBDB5 /* GitHubSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91574D2B2157EA08005FBDB5 /* GitHubSearchViewController.swift */; };
 		91574D2F2157EA08005FBDB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91574D2D2157EA08005FBDB5 /* Main.storyboard */; };
 		91574D312157EA0A005FBDB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91574D302157EA0A005FBDB5 /* Assets.xcassets */; };
 		91574D342157EA0A005FBDB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91574D322157EA0A005FBDB5 /* LaunchScreen.storyboard */; };
+		91574D532157ECA7005FBDB5 /* GitHubSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91574D522157ECA7005FBDB5 /* GitHubSearchViewModel.swift */; };
+		91574D552157ECF1005FBDB5 /* GitHubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91574D542157ECF1005FBDB5 /* GitHubRepository.swift */; };
+		91574D572157ED17005FBDB5 /* GitHubOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91574D562157ED17005FBDB5 /* GitHubOwner.swift */; };
+		91574D5D2157EDC4005FBDB5 /* SearchAPIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91574D5C2157EDC4005FBDB5 /* SearchAPIProtocol.swift */; };
+		91574D5F2157EDFC005FBDB5 /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91574D5E2157EDFC005FBDB5 /* Pagination.swift */; };
+		91574D622157EE4C005FBDB5 /* SearchAPIStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91574D612157EE4C005FBDB5 /* SearchAPIStub.swift */; };
+		91574D642157EE5E005FBDB5 /* SearchAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91574D632157EE5E005FBDB5 /* SearchAPIResponse.swift */; };
+		91574D692157EECC005FBDB5 /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91574D672157EECC005FBDB5 /* SearchResultTableViewCell.swift */; };
+		91574D6A2157EECC005FBDB5 /* SearchResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91574D682157EECC005FBDB5 /* SearchResultTableViewCell.xib */; };
+		91574D702157EF4B005FBDB5 /* Registrable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91574D6F2157EF4B005FBDB5 /* Registrable.swift */; };
+		91574D722157EF6B005FBDB5 /* NibFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91574D712157EF6B005FBDB5 /* NibFactory.swift */; };
+		91574D742157F02B005FBDB5 /* UITableView+Registrable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91574D732157F02B005FBDB5 /* UITableView+Registrable.swift */; };
+		91574D772157F224005FBDB5 /* Observable+Concurrent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91574D762157F224005FBDB5 /* Observable+Concurrent.swift */; };
+		91574D792157F2E7005FBDB5 /* ObservableConvertibleType+SkipEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91574D782157F2E7005FBDB5 /* ObservableConvertibleType+SkipEmpty.swift */; };
+		91574D7C2157F3DE005FBDB5 /* UITableView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91574D7B2157F3DE005FBDB5 /* UITableView+Rx.swift */; };
+		91574D952157FF9D005FBDB5 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91574D892157FF8B005FBDB5 /* Alamofire.framework */; };
+		91574D962157FF9D005FBDB5 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91574D892157FF8B005FBDB5 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		91574D972157FF9D005FBDB5 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91574D8A2157FF8B005FBDB5 /* RxCocoa.framework */; };
+		91574D982157FF9D005FBDB5 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91574D8A2157FF8B005FBDB5 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		91574D992157FF9D005FBDB5 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91574D8B2157FF8C005FBDB5 /* RxSwift.framework */; };
+		91574D9A2157FF9D005FBDB5 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91574D8B2157FF8C005FBDB5 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		91574D9B2157FF9D005FBDB5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				91574D982157FF9D005FBDB5 /* RxCocoa.framework in Embed Frameworks */,
+				91574D962157FF9D005FBDB5 /* Alamofire.framework in Embed Frameworks */,
+				91574D9A2157FF9D005FBDB5 /* RxSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		91574D262157EA08005FBDB5 /* TechBookFestivalAPIClientPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechBookFestivalAPIClientPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91574D292157EA08005FBDB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		91574D2B2157EA08005FBDB5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		91574D2B2157EA08005FBDB5 /* GitHubSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubSearchViewController.swift; sourceTree = "<group>"; };
 		91574D2E2157EA08005FBDB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		91574D302157EA0A005FBDB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91574D332157EA0A005FBDB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91574D352157EA0A005FBDB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91574D522157ECA7005FBDB5 /* GitHubSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubSearchViewModel.swift; sourceTree = "<group>"; };
+		91574D542157ECF1005FBDB5 /* GitHubRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepository.swift; sourceTree = "<group>"; };
+		91574D562157ED17005FBDB5 /* GitHubOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubOwner.swift; sourceTree = "<group>"; };
+		91574D5C2157EDC4005FBDB5 /* SearchAPIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAPIProtocol.swift; sourceTree = "<group>"; };
+		91574D5E2157EDFC005FBDB5 /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
+		91574D612157EE4C005FBDB5 /* SearchAPIStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAPIStub.swift; sourceTree = "<group>"; };
+		91574D632157EE5E005FBDB5 /* SearchAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAPIResponse.swift; sourceTree = "<group>"; };
+		91574D672157EECC005FBDB5 /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewCell.swift; sourceTree = "<group>"; };
+		91574D682157EECC005FBDB5 /* SearchResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultTableViewCell.xib; sourceTree = "<group>"; };
+		91574D6F2157EF4B005FBDB5 /* Registrable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registrable.swift; sourceTree = "<group>"; };
+		91574D712157EF6B005FBDB5 /* NibFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibFactory.swift; sourceTree = "<group>"; };
+		91574D732157F02B005FBDB5 /* UITableView+Registrable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Registrable.swift"; sourceTree = "<group>"; };
+		91574D762157F224005FBDB5 /* Observable+Concurrent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Concurrent.swift"; sourceTree = "<group>"; };
+		91574D782157F2E7005FBDB5 /* ObservableConvertibleType+SkipEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableConvertibleType+SkipEmpty.swift"; sourceTree = "<group>"; };
+		91574D7B2157F3DE005FBDB5 /* UITableView+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Rx.swift"; sourceTree = "<group>"; };
+		91574D892157FF8B005FBDB5 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		91574D8A2157FF8B005FBDB5 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		91574D8B2157FF8C005FBDB5 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +84,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91574D972157FF9D005FBDB5 /* RxCocoa.framework in Frameworks */,
+				91574D952157FF9D005FBDB5 /* Alamofire.framework in Frameworks */,
+				91574D992157FF9D005FBDB5 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +98,7 @@
 			children = (
 				91574D282157EA08005FBDB5 /* TechBookFestivalAPIClientPlayground */,
 				91574D272157EA08005FBDB5 /* Products */,
+				91574D882157FF8B005FBDB5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +113,167 @@
 		91574D282157EA08005FBDB5 /* TechBookFestivalAPIClientPlayground */ = {
 			isa = PBXGroup;
 			children = (
+				91574D6B2157EF1E005FBDB5 /* Extension */,
+				91574D582157ED87005FBDB5 /* API */,
+				91574D462157EB15005FBDB5 /* Model */,
+				91574D452157EB0F005FBDB5 /* ViewModel */,
+				91574D442157EB09005FBDB5 /* View */,
 				91574D292157EA08005FBDB5 /* AppDelegate.swift */,
-				91574D2B2157EA08005FBDB5 /* ViewController.swift */,
-				91574D2D2157EA08005FBDB5 /* Main.storyboard */,
 				91574D302157EA0A005FBDB5 /* Assets.xcassets */,
 				91574D322157EA0A005FBDB5 /* LaunchScreen.storyboard */,
 				91574D352157EA0A005FBDB5 /* Info.plist */,
 			);
 			path = TechBookFestivalAPIClientPlayground;
+			sourceTree = "<group>";
+		};
+		91574D442157EB09005FBDB5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				91574D472157EB1F005FBDB5 /* GitHubSearch */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		91574D452157EB0F005FBDB5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				91574D512157EC84005FBDB5 /* GitHubSearch */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		91574D462157EB15005FBDB5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				91574D7D2157F7BA005FBDB5 /* GitHub */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		91574D472157EB1F005FBDB5 /* GitHubSearch */ = {
+			isa = PBXGroup;
+			children = (
+				91574D652157EE99005FBDB5 /* TableViewCell */,
+				91574D2D2157EA08005FBDB5 /* Main.storyboard */,
+				91574D2B2157EA08005FBDB5 /* GitHubSearchViewController.swift */,
+			);
+			path = GitHubSearch;
+			sourceTree = "<group>";
+		};
+		91574D512157EC84005FBDB5 /* GitHubSearch */ = {
+			isa = PBXGroup;
+			children = (
+				91574D522157ECA7005FBDB5 /* GitHubSearchViewModel.swift */,
+			);
+			path = GitHubSearch;
+			sourceTree = "<group>";
+		};
+		91574D582157ED87005FBDB5 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				91574D592157ED9D005FBDB5 /* GitHub */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		91574D592157ED9D005FBDB5 /* GitHub */ = {
+			isa = PBXGroup;
+			children = (
+				91574D5A2157EDA6005FBDB5 /* Search */,
+			);
+			path = GitHub;
+			sourceTree = "<group>";
+		};
+		91574D5A2157EDA6005FBDB5 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				91574D612157EE4C005FBDB5 /* SearchAPIStub.swift */,
+				91574D5C2157EDC4005FBDB5 /* SearchAPIProtocol.swift */,
+				91574D632157EE5E005FBDB5 /* SearchAPIResponse.swift */,
+				91574D5E2157EDFC005FBDB5 /* Pagination.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		91574D652157EE99005FBDB5 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				91574D662157EEA3005FBDB5 /* SearchResultTableViewCell */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		91574D662157EEA3005FBDB5 /* SearchResultTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				91574D672157EECC005FBDB5 /* SearchResultTableViewCell.swift */,
+				91574D682157EECC005FBDB5 /* SearchResultTableViewCell.xib */,
+			);
+			path = SearchResultTableViewCell;
+			sourceTree = "<group>";
+		};
+		91574D6B2157EF1E005FBDB5 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				91574D752157F210005FBDB5 /* Rx */,
+				91574D6C2157EF25005FBDB5 /* UIKit */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		91574D6C2157EF25005FBDB5 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				91574D6D2157EF2E005FBDB5 /* Registrable */,
+				91574D712157EF6B005FBDB5 /* NibFactory.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		91574D6D2157EF2E005FBDB5 /* Registrable */ = {
+			isa = PBXGroup;
+			children = (
+				91574D6F2157EF4B005FBDB5 /* Registrable.swift */,
+				91574D732157F02B005FBDB5 /* UITableView+Registrable.swift */,
+			);
+			path = Registrable;
+			sourceTree = "<group>";
+		};
+		91574D752157F210005FBDB5 /* Rx */ = {
+			isa = PBXGroup;
+			children = (
+				91574D7A2157F3CF005FBDB5 /* UIKit */,
+				91574D762157F224005FBDB5 /* Observable+Concurrent.swift */,
+				91574D782157F2E7005FBDB5 /* ObservableConvertibleType+SkipEmpty.swift */,
+			);
+			path = Rx;
+			sourceTree = "<group>";
+		};
+		91574D7A2157F3CF005FBDB5 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				91574D7B2157F3DE005FBDB5 /* UITableView+Rx.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		91574D7D2157F7BA005FBDB5 /* GitHub */ = {
+			isa = PBXGroup;
+			children = (
+				91574D542157ECF1005FBDB5 /* GitHubRepository.swift */,
+				91574D562157ED17005FBDB5 /* GitHubOwner.swift */,
+			);
+			path = GitHub;
+			sourceTree = "<group>";
+		};
+		91574D882157FF8B005FBDB5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				91574D892157FF8B005FBDB5 /* Alamofire.framework */,
+				91574D8A2157FF8B005FBDB5 /* RxCocoa.framework */,
+				91574D8B2157FF8C005FBDB5 /* RxSwift.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +286,7 @@
 				91574D222157EA08005FBDB5 /* Sources */,
 				91574D232157EA08005FBDB5 /* Frameworks */,
 				91574D242157EA08005FBDB5 /* Resources */,
+				91574D9B2157FF9D005FBDB5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -122,6 +335,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91574D6A2157EECC005FBDB5 /* SearchResultTableViewCell.xib in Resources */,
 				91574D342157EA0A005FBDB5 /* LaunchScreen.storyboard in Resources */,
 				91574D312157EA0A005FBDB5 /* Assets.xcassets in Resources */,
 				91574D2F2157EA08005FBDB5 /* Main.storyboard in Resources */,
@@ -135,8 +349,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91574D2C2157EA08005FBDB5 /* ViewController.swift in Sources */,
+				91574D692157EECC005FBDB5 /* SearchResultTableViewCell.swift in Sources */,
+				91574D552157ECF1005FBDB5 /* GitHubRepository.swift in Sources */,
+				91574D742157F02B005FBDB5 /* UITableView+Registrable.swift in Sources */,
+				91574D532157ECA7005FBDB5 /* GitHubSearchViewModel.swift in Sources */,
+				91574D702157EF4B005FBDB5 /* Registrable.swift in Sources */,
+				91574D7C2157F3DE005FBDB5 /* UITableView+Rx.swift in Sources */,
+				91574D722157EF6B005FBDB5 /* NibFactory.swift in Sources */,
+				91574D2C2157EA08005FBDB5 /* GitHubSearchViewController.swift in Sources */,
+				91574D772157F224005FBDB5 /* Observable+Concurrent.swift in Sources */,
+				91574D642157EE5E005FBDB5 /* SearchAPIResponse.swift in Sources */,
+				91574D792157F2E7005FBDB5 /* ObservableConvertibleType+SkipEmpty.swift in Sources */,
+				91574D5F2157EDFC005FBDB5 /* Pagination.swift in Sources */,
+				91574D622157EE4C005FBDB5 /* SearchAPIStub.swift in Sources */,
 				91574D2A2157EA08005FBDB5 /* AppDelegate.swift in Sources */,
+				91574D5D2157EDC4005FBDB5 /* SearchAPIProtocol.swift in Sources */,
+				91574D572157ED17005FBDB5 /* GitHubOwner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +512,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 263N9Q866N;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TechBookFestivalAPIClientPlayground/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -302,6 +534,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 263N9Q866N;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TechBookFestivalAPIClientPlayground/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
